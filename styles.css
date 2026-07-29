@@ -15,7 +15,7 @@
   --bg: #f3f6f9;
 }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--ink); }
+body { margin: 0; font-family: Inter, "Arial", Arial, sans-serif; background: var(--bg); color: var(--ink); }
 .topbar { background: linear-gradient(115deg, #0c243e, #174d76); color: white; padding: 28px max(24px, calc((100vw - 1500px)/2)); display: flex; justify-content: space-between; gap: 24px; align-items: end; box-shadow: 0 5px 20px rgba(15,35,55,.18); }
 .eyebrow { margin: 0 0 7px; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; opacity: .75; font-weight: 700; }
 h1 { margin: 0; font-size: clamp(28px, 3vw, 44px); letter-spacing: -.03em; }
