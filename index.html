@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VDS Progress Summary</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PMU · LG&CD Department</p>
+      <h1>VDS Progress Summary</h1>
+      <p class="subtitle">District-wise status of developments forwarded to Local Governments</p>
+    </div>
+    <div class="filter-box">
+      <label for="periodFilter">Reporting Period</label>
+      <select id="periodFilter" aria-label="Select reporting month"></select>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="kpi-grid" aria-label="Summary indicators">
+      <article class="kpi kpi-forwarded">
+        <span>Cases Forwarded to LGs</span>
+        <strong id="forwardedKpi">0</strong>
+        <small id="forwardedSplit">Road 0 · Others 0</small>
+      </article>
+      <article class="kpi kpi-responded">
+        <span>Feedback Received</span>
+        <strong id="respondedKpi">0</strong>
+        <small id="respondedSplit">Road 0 · Others 0</small>
+      </article>
+      <article class="kpi kpi-pending">
+        <span>Pending Responses</span>
+        <strong id="pendingKpi">0</strong>
+        <small id="pendingSplit">Road 0 · Others 0</small>
+      </article>
+      <article class="kpi kpi-rate">
+        <span>Overall Response Rate</span>
+        <strong id="responseRateKpi">0%</strong>
+        <div class="progress"><i id="rateBar"></i></div>
+      </article>
+    </section>
+
+    <section class="table-card">
+      <div class="table-heading">
+        <div>
+          <h2>District Progress Summary</h2>
+          <p id="periodCaption">Till Date</p>
+        </div>
+        <input id="districtSearch" type="search" placeholder="Search district…" aria-label="Search district" />
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr class="group-row">
+              <th rowspan="2">Sr.<br>No.</th>
+              <th rowspan="2" class="district-col">Name of District</th>
+              <th colspan="3" class="forwarded-head">Valid Developments<br><span>(Forwarded to LGs)</span></th>
+              <th colspan="3" class="responded-head">Responded Developments</th>
+              <th colspan="3" class="pending-head">Pending Responses</th>
+            </tr>
+            <tr class="subhead-row">
+              <th>Total</th><th>Along Roads</th><th>Others</th>
+              <th>Total</th><th>Along Roads</th><th>Others</th>
+              <th>Total</th><th>Along Roads</th><th>Others</th>
+            </tr>
+          </thead>
+          <tbody id="summaryBody"></tbody>
+          <tfoot id="summaryFoot"></tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>Source: Summary Sheet of VDS.xlsx</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
